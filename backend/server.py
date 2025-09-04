@@ -32,13 +32,16 @@ client = AsyncIOMotorClient(MONGO_URL)
 db = client.moods_db
 
 # LLM Integration
-try:
-    from emergentintegrations.llm.chat import LlmChat, UserMessage
-    EMERGENT_LLM_KEY = os.environ.get('EMERGENT_LLM_KEY')
-    llm_available = bool(EMERGENT_LLM_KEY)
-except ImportError:
-    print("Warning: emergentintegrations not installed")
-    llm_available = False
+import os,openai
+
+# Check if OpenAI API key is available
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+
+llm_available = bool(OPENAI_API_KEY)
+
+if not llm_available:
+    print("Warning: OpenAI API key not found")
+
 
 # External API keys
 TMDB_API_KEY = os.environ.get('TMDB_API_KEY', 'demo_key')
@@ -91,7 +94,7 @@ async def analyze_mood_with_llm(memory_text: str) -> Dict[str, Any]:
     try:
         # Initialize LLM chat
         chat = LlmChat(
-            api_key=EMERGENT_LLM_KEY,
+            api_key=LLM_KEY,
             session_id=f"mood_analysis_{uuid.uuid4()}",
             system_message="""You are an expert emotion analyst. Analyze the given text and determine the primary mood and emotions.
 
