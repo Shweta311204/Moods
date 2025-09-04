@@ -221,17 +221,8 @@ Health check endpoint for monitoring.
 
 
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-
-
-##  Acknowledgments 🙏
+##  Acknowledgments 
 
 - OpenAI for GPT-4 API
 - TMDB for movie and TV show data
@@ -239,10 +230,4 @@ Health check endpoint for monitoring.
 - ShadCN for UI components
 - Tailwind CSS for styling system
 
-## 📞 Support
 
-If you encounter any issues or have questions, please open an issue on GitHub.
-
----
-
-**Built using React, FastAPI, and AI**
