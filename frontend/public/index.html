@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#8b5cf6" />
+        <meta
+            name="description"
+            content="Moods - AI-powered mood-based recommendations for movies, books, and TV shows. Discover content that matches your emotions."
+        />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://moods.my/">
+        <meta property="og:title" content="Moods - AI-Powered Mood-Based Recommendations">
+        <meta property="og:description" content="Discover movies, books, and TV shows that match your emotions. Powered by advanced AI mood analysis.">
+        <meta property="og:image" content="%PUBLIC_URL%/og-image.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://moods.my/">
+        <meta property="twitter:title" content="Moods - AI-Powered Mood-Based Recommendations">
+        <meta property="twitter:description" content="Discover movies, books, and TV shows that match your emotions. Powered by advanced AI mood analysis.">
+        <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png">
+
+        <!-- Keywords -->
+        <meta name="keywords" content="mood, recommendations, AI, movies, books, TV shows, emotions, entertainment, mood-based, personalized">
+        
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Moods",
+          "url": "https://moods.my",
+          "description": "AI-powered mood-based recommendations for movies, books, and TV shows",
+          "applicationCategory": "Entertainment",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript"
+        }
+        </script>
+
+        <title>Moods - AI-Powered Mood-Based Recommendations</title>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <script>
+            !(function (t, e) {
+                var o, n, p, r;
+                e.__SV ||
+                    ((window.posthog = e),
+                    (e._i = []),
+                    (e.init = function (i, s, a) {
+                        function g(t, e) {
+                            var o = e.split(".");
+                            2 == o.length && ((t = t[o[0]]), (e = o[1]));
+                            var n = t;
+                            return function () {
+                                n[e].apply(n, arguments);
+                            };
+                        }
+                        ((p = t.createElement("script")).type = "text/javascript"),
+                            (p.async = !0),
+                            (p.src = s.api_host + "/static/array.js"),
+                            (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                        var u = e;
+                        for (
+                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
+                                u.people = u.people || [],
+                                u.toString = function (t) {
+                                    var e = "posthog";
+                                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+                                },
+                                u.people.toString = function () {
+                                    return u.toString(1) + ".people (stub)";
+                                },
+                                o =
+                                    "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(
+                                        " "
+                                    ),
+                                n = 0;
+                            n < o.length;
+                            n++
+                        )
+                            u[o[n]] = g(u, o[n]);
+                        e._i.push([i, s, a]);
+                    }),
+                    (e.__SV = 1));
+            })(document, window.posthog || []);
+            posthog.init("phc_o7C6kqVqU4wkm0VcXFh43wpgOaEMglpS2DqjX4pFSMq", {
+                api_host: "https://app.posthog.com",
+            });
+        </script>
+    </body>
+</html>
