@@ -125,19 +125,37 @@ The app recognizes and provides recommendations for:
 ## # Project Structure
 
 ```
-moods.my/
-├── backend/
-│   ├── server.py              # FastAPI application
-│   ├── requirements.txt       # Python dependencies
-│   └── .env                   # Environment variables
-├── frontend/
-│   ├── src/
-│   │   ├── App.js            # Main React component
-│   │   ├── components/ui/    # UI components
-│   │   └── hooks/            # Custom React hooks
-│   ├── public/               # Static assets
-│   └── package.json          # Node.js dependencies
-└── README.md
+Moods/
+├── backend/                 # Python backend application
+│   ├── .env                # Environment variables (API keys, DB config)
+│   ├── requirements.txt    # Python dependencies
+│   └── server.py          # Main backend server file
+│
+├── frontend/              # React frontend application
+│   ├── public/           # Static assets
+│   │   └── index.html    # Main HTML template
+│   │
+│   ├── src/              # Source code
+│   │   ├── components/   # Reusable React components
+│   │   ├── hooks/        # Custom React hooks
+│   │   │   └── use-toast.js
+│   │   │
+│   │   ├── App.css       # Application styles
+│   │   ├── App.js        # Main application component
+│   │   ├── index.css     # Global styles
+│   │   └── index.js      # Application entry point
+│   │
+│   ├── .env              # Frontend environment variables
+│   ├── .gitignore        # Git ignore rules
+│   ├── components.json   # Component configuration
+│   ├── craco.config.js   # CRACO configuration
+│   ├── jsconfig.json     # JavaScript configuration
+│   ├── package.json      # Node.js dependencies
+│   ├── postcss.config.js # PostCSS configuration
+│   ├── README.md         # Frontend documentation
+│   └── tailwind.config.js # Tailwind CSS configuration
+│
+└── README.md           # Project documentation
 ```
 
 ## # API Endpoints
